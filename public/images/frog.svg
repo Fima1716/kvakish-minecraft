@@ -1,0 +1,124 @@
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Pixel art frog with proper colors -->
+  
+  <!-- Black outline and details -->
+  <g fill="#000000">
+    <!-- Eyes outline -->
+    <rect x="80" y="80" width="20" height="20"/>
+    <rect x="60" y="100" width="20" height="20"/>
+    <rect x="60" y="120" width="20" height="20"/>
+    <rect x="80" y="140" width="20" height="20"/>
+    
+    <rect x="200" y="80" width="20" height="20"/>
+    <rect x="220" y="100" width="20" height="20"/>
+    <rect x="220" y="120" width="20" height="20"/>
+    <rect x="200" y="140" width="20" height="20"/>
+    
+    <!-- Top outline -->
+    <rect x="100" y="60" width="20" height="20"/>
+    <rect x="180" y="60" width="20" height="20"/>
+    
+    <!-- Body outline -->
+    <rect x="60" y="160" width="20" height="20"/>
+    <rect x="220" y="160" width="20" height="20"/>
+    <rect x="80" y="240" width="20" height="20"/>
+    <rect x="200" y="240" width="20" height="20"/>
+    
+    <!-- Bottom -->
+    <rect x="100" y="260" width="20" height="20"/>
+    <rect x="120" y="260" width="20" height="20"/>
+    <rect x="140" y="260" width="20" height="20"/>
+    <rect x="160" y="260" width="20" height="20"/>
+    <rect x="180" y="260" width="20" height="20"/>
+  </g>
+  
+  <!-- Dark green -->
+  <g fill="#4a7c59">
+    <rect x="100" y="80" width="20" height="20"/>
+    <rect x="180" y="80" width="20" height="20"/>
+    <rect x="80" y="100" width="20" height="20"/>
+    <rect x="200" y="100" width="20" height="20"/>
+    <rect x="80" y="120" width="20" height="20"/>
+    <rect x="200" y="120" width="20" height="20"/>
+    
+    <!-- Body sides -->
+    <rect x="80" y="180" width="20" height="20"/>
+    <rect x="80" y="200" width="20" height="20"/>
+    <rect x="80" y="220" width="20" height="20"/>
+    <rect x="200" y="180" width="20" height="20"/>
+    <rect x="200" y="200" width="20" height="20"/>
+    <rect x="200" y="220" width="20" height="20"/>
+  </g>
+  
+  <!-- Medium green -->
+  <g fill="#6b9b6e">
+    <rect x="120" y="80" width="20" height="20"/>
+    <rect x="140" y="80" width="20" height="20"/>
+    <rect x="160" y="80" width="20" height="20"/>
+    <rect x="100" y="100" width="20" height="20"/>
+    <rect x="120" y="100" width="20" height="20"/>
+    <rect x="160" y="100" width="20" height="20"/>
+    <rect x="180" y="100" width="20" height="20"/>
+    <rect x="100" y="120" width="20" height="20"/>
+    <rect x="180" y="120" width="20" height="20"/>
+    <rect x="100" y="140" width="20" height="20"/>
+    <rect x="180" y="140" width="20" height="20"/>
+    
+    <!-- Body -->
+    <rect x="100" y="180" width="20" height="20"/>
+    <rect x="180" y="180" width="20" height="20"/>
+    <rect x="100" y="200" width="20" height="20"/>
+    <rect x="180" y="200" width="20" height="20"/>
+    <rect x="100" y="220" width="20" height="20"/>
+    <rect x="180" y="220" width="20" height="20"/>
+    <rect x="100" y="240" width="20" height="20"/>
+    <rect x="180" y="240" width="20" height="20"/>
+  </g>
+  
+  <!-- Light green -->
+  <g fill="#8bc34a">
+    <rect x="120" y="100" width="20" height="20"/>
+    <rect x="140" y="100" width="20" height="20"/>
+    <rect x="160" y="100" width="20" height="20"/>
+    <rect x="120" y="120" width="20" height="20"/>
+    <rect x="140" y="120" width="20" height="20"/>
+    <rect x="160" y="120" width="20" height="20"/>
+    <rect x="120" y="140" width="20" height="20"/>
+    <rect x="140" y="140" width="20" height="20"/>
+    <rect x="160" y="140" width="20" height="20"/>
+  </g>
+  
+  <!-- Yellow eyes -->
+  <g fill="#fff9c4">
+    <rect x="80" y="100" width="20" height="20"/>
+    <rect x="80" y="120" width="20" height="20"/>
+    <rect x="200" y="100" width="20" height="20"/>
+    <rect x="200" y="120" width="20" height="20"/>
+  </g>
+  
+  <!-- Yellow belly -->
+  <g fill="#ffeb3b">
+    <rect x="120" y="180" width="20" height="20"/>
+    <rect x="140" y="180" width="20" height="20"/>
+    <rect x="160" y="180" width="20" height="20"/>
+    <rect x="120" y="200" width="20" height="20"/>
+    <rect x="140" y="200" width="20" height="20"/>
+    <rect x="160" y="200" width="20" height="20"/>
+  </g>
+  
+  <!-- Orange belly bottom -->
+  <g fill="#ffa726">
+    <rect x="120" y="220" width="20" height="20"/>
+    <rect x="140" y="220" width="20" height="20"/>
+    <rect x="160" y="220" width="20" height="20"/>
+    <rect x="120" y="240" width="20" height="20"/>
+    <rect x="140" y="240" width="20" height="20"/>
+    <rect x="160" y="240" width="20" height="20"/>
+  </g>
+  
+  <!-- Feet -->
+  <g fill="#6b9b6e">
+    <rect x="60" y="240" width="20" height="20"/>
+    <rect x="220" y="240" width="20" height="20"/>
+  </g>
+</svg>

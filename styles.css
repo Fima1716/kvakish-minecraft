@@ -1,0 +1,353 @@
+/* CSS Variables */
+:root {
+    --color-primary: #7711d7;
+    --color-text-gray: #6e6e6e;
+    --color-yellow: #f9feca;
+    --color-purple-light: #c48cf9;
+    
+    --font-family: 'Press Start 2P', monospace, sans-serif;
+    
+    --font-size-title: 128px;
+    --font-size-welcome: 96px;
+    --font-size-description: 64px;
+    --font-size-social: 64px;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Main Container */
+.container {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(to top right, #d4f57e 0%, #f9feca 20%, #ffffff 50%, #e8d4f8 75%, #c48cf9 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+    overflow: hidden;
+}
+
+/* Decorative Stars */
+.star {
+    position: absolute;
+    z-index: 1;
+}
+
+.star-yellow {
+    top: 139px;
+    right: 123px;
+    width: 339px;
+    height: 339px;
+    filter: invert(95%) sepia(100%) saturate(500%) hue-rotate(10deg) brightness(105%);
+}
+
+.star-purple {
+    bottom: 415px;
+    left: 279px;
+    width: 218px;
+    height: 218px;
+    filter: invert(80%) sepia(50%) saturate(500%) hue-rotate(220deg) brightness(100%);
+}
+
+/* Main Content */
+.content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+}
+
+.title {
+    font-size: var(--font-size-title);
+    color: var(--color-primary);
+    font-weight: 400;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+.welcome {
+    font-size: var(--font-size-welcome);
+    color: var(--color-text-gray);
+    font-weight: 400;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.description {
+    font-size: var(--font-size-description);
+    color: var(--color-text-gray);
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.description .highlight {
+    color: var(--color-primary);
+}
+
+/* Footer */
+.footer {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-decoration: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-4px);
+    opacity: 0.8;
+}
+
+.social-link:active {
+    transform: translateY(-2px);
+}
+
+.social-icon {
+    width: 132px;
+    height: 132px;
+    filter: invert(20%) sepia(100%) saturate(5000%) hue-rotate(260deg) brightness(90%);
+    transition: filter 0.2s ease;
+}
+
+.social-link:hover .social-icon {
+    filter: invert(20%) sepia(100%) saturate(5000%) hue-rotate(260deg) brightness(110%);
+}
+
+.social-text {
+    font-size: var(--font-size-social);
+    color: var(--color-primary);
+    font-weight: 400;
+    transition: color 0.2s ease;
+}
+
+.social-link:hover .social-text {
+    color: #9333ea;
+}
+
+/* Tablet Styles */
+@media (max-width: 1200px) {
+    :root {
+        --font-size-title: 96px;
+        --font-size-welcome: 72px;
+        --font-size-description: 48px;
+        --font-size-social: 48px;
+    }
+    
+    .container {
+        padding: 35px;
+    }
+    
+    .star-yellow {
+        top: 100px;
+        right: 80px;
+        width: 250px;
+        height: 250px;
+    }
+    
+    .star-purple {
+        bottom: 300px;
+        left: 180px;
+        width: 160px;
+        height: 160px;
+    }
+    
+    .social-icon {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 1024px) {
+    :root {
+        --font-size-title: 80px;
+        --font-size-welcome: 60px;
+        --font-size-description: 40px;
+        --font-size-social: 40px;
+    }
+    
+    .container {
+        padding: 30px;
+    }
+    
+    .star-yellow {
+        top: 80px;
+        right: 60px;
+        width: 200px;
+        height: 200px;
+    }
+    
+    .star-purple {
+        bottom: 250px;
+        left: 150px;
+        width: 130px;
+        height: 130px;
+    }
+    
+    .social-icon {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    :root {
+        --font-size-title: 52px;
+        --font-size-welcome: 38px;
+        --font-size-description: 26px;
+        --font-size-social: 30px;
+    }
+    
+    .container {
+        padding: 25px 20px;
+    }
+    
+    .star-yellow {
+        top: 50px;
+        right: 30px;
+        width: 140px;
+        height: 140px;
+    }
+    
+    .star-purple {
+        bottom: 200px;
+        left: 30px;
+        width: 100px;
+        height: 100px;
+    }
+    
+    .content {
+        padding: 15px 10px;
+    }
+    
+    .title {
+        margin-bottom: 25px;
+        word-wrap: break-word;
+    }
+    
+    .welcome {
+        margin-bottom: 20px;
+        word-wrap: break-word;
+    }
+    
+    .description {
+        word-wrap: break-word;
+    }
+    
+    .footer {
+        flex-direction: column;
+        gap: 35px;
+        align-items: center;
+    }
+    
+    .social-link {
+        gap: 15px;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .social-icon {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+    :root {
+        --font-size-title: 36px;
+        --font-size-welcome: 26px;
+        --font-size-description: 20px;
+        --font-size-social: 22px;
+    }
+    
+    .container {
+        padding: 20px 15px;
+    }
+    
+    .star-yellow {
+        top: 30px;
+        right: 15px;
+        width: 100px;
+        height: 100px;
+    }
+    
+    .star-purple {
+        bottom: 160px;
+        left: 15px;
+        width: 70px;
+        height: 70px;
+    }
+    
+    .content {
+        padding: 10px 5px;
+    }
+    
+    .title {
+        margin-bottom: 20px;
+    }
+    
+    .welcome {
+        margin-bottom: 15px;
+    }
+    
+    .footer {
+        gap: 25px;
+    }
+    
+    .social-link {
+        gap: 12px;
+    }
+    
+    .social-icon {
+        width: 56px;
+        height: 56px;
+    }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 360px) {
+    :root {
+        --font-size-title: 28px;
+        --font-size-welcome: 20px;
+        --font-size-description: 16px;
+        --font-size-social: 18px;
+    }
+    
+    .star-yellow {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .star-purple {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .social-icon {
+        width: 48px;
+        height: 48px;
+    }
+}
