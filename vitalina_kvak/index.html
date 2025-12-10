@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сервер Квакиша - Minecraft Server</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="landing.css">
+    <link type="image/x-icon" href="./public/images/123-Photoroom.png" rel="shortcut icon">
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div id="splash-screen" class="splash-screen">
+        <img src="assets/star-yellow.svg" alt="" class="star star-yellow" aria-hidden="true">
+        <img src="assets/star-purple.svg" alt="" class="star star-purple" aria-hidden="true">
+        
+        <main class="splash-content">
+            <h1 class="splash-title">Сервер Квакиша</h1>
+            <h2 class="splash-welcome">Добро пожаловать в наше болото!</h2>
+            <p class="splash-description">ванильное выживание <span class="highlight">без</span> читов</p>
+        </main>
+        
+        <footer class="splash-footer">
+            <a href="https://t.me/kvakishnaya228" target="_blank" rel="noopener noreferrer" class="social-link">
+                <img src="assets/discord-icon.svg" alt="Telegram" class="social-icon">
+                <span class="social-text">kvakishnaya228</span>
+            </a>
+            <a href="https://www.youtube.com/@kvakishnaya/videos" target="_blank" rel="noopener noreferrer" class="social-link">
+                <img src="assets/youtube-icon.svg" alt="YouTube" class="social-icon">
+                <span class="social-text">kvakishnaya</span>
+            </a>
+        </footer>
+    </div>
+
+    <!-- Main Landing Page -->
+    <div id="main-content" class="main-content">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="#hero" class="nav-link">правила</a>
+                <a href="#punishments" class="nav-link">наказания</a>
+                <a href="#connect" class="nav-link">как подключиться</a>
+                <a href="#donate" class="nav-link">донат</a>
+                <a href="#gallery" class="nav-link">галерея</a>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-bg parallax" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/IMG_20251114_182739_784.PNG');"></div>
+            <div class="hero-content">
+                <h1 class="hero-title fade-in">Сервер Квакиша</h1>
+                <p class="hero-subtitle fade-in">Добро пожаловать в наше болото!</p>
+                <p class="hero-description fade-in">ванильное выживание <span class="highlight">без читов</span></p>
+                <a href="#rules" class="cta-button fade-in">Ознакомиться с правилами</a>
+            </div>
+        </section>
+
+        <!-- Principles Section -->
+        <section id="principles" class="principles">
+            <h2 class="section-title">Наши принципы</h2>
+            <div class="principles-grid">
+                <div class="principle-card" data-number="01">
+                    <span class="card-number">01</span>
+                    <h3 class="card-title">Честность — наш фундамент</h3>
+                </div>
+                <div class="principle-card" data-number="02">
+                    <span class="card-number">02</span>
+                    <h3 class="card-title">Дружелюбие — наша атмосфера</h3>
+                </div>
+                <div class="principle-card" data-number="03">
+                    <span class="card-number">03</span>
+                    <h3 class="card-title">Вежливость — наше правило общения</h3>
+                </div>
+                <div class="principle-card" data-number="04">
+                    <span class="card-number">04</span>
+                    <h3 class="card-title">Солидарность — мы помогаем друг другу</h3>
+                </div>
+                <div class="principle-card" data-number="05">
+                    <span class="card-number">05</span>
+                    <h3 class="card-title">Свобода творчества — мы уважаем чужой стиль</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rules Section -->
+        <section id="rules" class="rules">
+            <h2 class="section-title">Правила</h2>
+            <div class="rules-content">
+                <div class="rule-item">
+                    <h3 class="rule-number">01/ ОБЩЕНИЕ</h3>
+                    <p>— Запрещены оскорбления, дискриминация и разжигание конфликтов.</p>
+                    <p>— Не спамьте в чат, не злоупотребляйте Caps Lock.</p>
+                </div>
+                
+                <div class="rule-item">
+                    <h3 class="rule-number">02/ Реклама и Discord</h3>
+                    <p>— Реклама других серверов, ютуб-каналов и соцсетей без разрешения администрации запрещена.</p>
+                    <p>— В Discord-сервере действуют те же правила, что и в телеграмме</p>
+                    <p class="rule-note">Исключение: упоминание других проектов в разговоре</p>
+                </div>
+
+                <div class="rule-item">
+                    <h3 class="rule-number">03/ Читы и багюз</h3>
+                    <p>— Запрещены читы, дюпы, использование багов и сторонних программ (X-Ray, Fly, Kill Aura и т. д.).</p>
+                    <p>— Находку багов нужно сообщать администрации, а не использовать.</p>
+                </div>
+
+                <div class="rule-item">
+                    <h3 class="rule-number">04/ Грифферство и воровство</h3>
+                    <p>— Нельзя ломать, портить или воровать чужие постройки без разрешения владельца.</p>
+                    <p>— Если территория огорожена или есть табличка "Private" — это частная зона.</p>
+                </div>
+
+                <div class="rule-item">
+                    <h3 class="rule-number">05/ Игровой процесс</h3>
+                    <p>— Нельзя ломать, портить или воровать чужие постройки без разрешения владельца.</p>
+                    <p>— Если территория огорожена или есть табличка "Private" — это частная зона.</p>
+                </div>
+
+                <div class="rule-item">
+                    <h3 class="rule-number">06/ Обход наказания</h3>
+                    <p>— Запрещено создавать дополнительные аккаунты для обхода блокировки предыдущего аккаунта.</p>
+                    <p class="rule-note">Исключение: твинки для АФК ферм.</p>
+                </div>
+
+                <div class="rule-item">
+                    <h3 class="rule-number">07/ PvP (сырок против игрока)</h3>
+                    <p>— PvP разрешён только в специальных зонах или по взаимному согласию.</p>
+                    <p>— Запрещены убийства новичков и повторные убийства без причины.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Punishments Section -->
+        <section id="punishments" class="punishments">
+            <h2 class="section-title">Наказания</h2>
+            <div class="punishment-box">
+                <p>На нашем сервере мы стремимся создать честную и уважительную атмосферу для всех игроков.</p>
+                <p>Администрация оставляет за собой право выносить наказания на усмотрение, исходя из тяжести нарушения, включая просмотр логов и показаний свидетелей.</p>
+                <p class="punishment-highlight">Важно: Наказания являются необратимыми. Повторная попытка нарушить правила после разбана приведет к вечному бану без возможности обжалования.</p>
+            </div>
+
+            <div class="punishment-details">
+                <div class="punishment-row">
+                    <div class="punishment-content">
+                        <h3 class="punishment-number">01/ ЧИТЫ</h3>
+                        <p>Использование любых программ или модификаций, дающих нечестное преимущество.</p>
+                        <p><strong>Примеры:</strong> Fly, Kill-Aura, X-Ray, Speed, Зарядка, использование.</p>
+                    </div>
+                    <div class="punishment-badge">Вечный бан без возможности обжалования.</div>
+                </div>
+
+                <div class="punishment-row">
+                    <div class="punishment-content">
+                        <h3 class="punishment-number">02/ ГРИФФЕРСТВО</h3>
+                        <p>Намеренное нанесение ущерба постройкам или имуществу других игроков без их разрешения.</p>
+                        <p><strong>Примеры:</strong> кража из сундуков, поджог/разрушение построек, лава-гриферство, убийство чужих животных.</p>
+                    </div>
+                    <div class="punishment-badge">Вечный бан + откат ущерба по возможности.</div>
+                </div>
+
+                <div class="punishment-row">
+                    <div class="punishment-content">
+                        <h3 class="punishment-number">03/ ОСКОРБЛЕНИЯ, БУЛЛИНГ</h3>
+                        <p>Оскорбление других игроков, унизительные высказывания, травля, разжигание ненависти.</p>
+                    </div>
+                    <div class="punishment-badge">Мут от 1 часа до 7 дней (на усмотрение модератора).</div>
+                </div>
+
+                <div class="punishment-row punishment-row-reverse">
+                    <div class="punishment-badge">Мут от 30 минут до 3 часов.</div>
+                    <div class="punishment-content">
+                        <h3 class="punishment-number">04/ СПАМ, ФЛУД, КАПС</h3>
+                        <p>Намеренная отправка повторяющихся сообщений или сообщений заглавными буквами (Caps Lock), затрудняющая чтение чата.</p>
+                    </div>
+                </div>
+
+                <div class="punishment-row">
+                    <div class="punishment-content">
+                        <h3 class="punishment-number">05/ РЕКЛАМА ДРУГИХ СЕРВЕРОВ</h3>
+                        <p>Упоминание IP-адресов или названий других проектов в любом виде (чат, книги, таблички).</p>
+                    </div>
+                    <div class="punishment-badge">Вечный бан без возможности обжалования.</div>
+                </div>
+
+                <div class="punishment-row punishment-row-reverse">
+                    <div class="punishment-badge">Бан от 1 до 7 дней.</div>
+                    <div class="punishment-content">
+                        <h3 class="punishment-number">06/ НЕАДЕКВАТНОЕ ПОВЕДЕНИЕ</h3>
+                        <p>Провокации, угрозы (даже самогательства), экстремистские высказывания.</p>
+                    </div>
+                </div>
+
+                <div class="punishment-row">
+                    <div class="punishment-content">
+                        <h3 class="punishment-number">07/ КЛОНЫ (АЛЬТЫ)</h3>
+                        <p>Использование дополнительных аккаунтов для обхода выданного наказания (мута/ бана).</p>
+                    </div>
+                    <div class="punishment-badge">Бан всех связанных аккаунтов.</div>
+                </div>
+
+                <div class="punishment-row punishment-row-reverse">
+                    <div class="punishment-badge">Предупреждение + устранение ущерба.</div>
+                    <div class="punishment-content">
+                        <h3 class="punishment-number">08/ НЕСПОРТИВНОЕ ПОВЕДЕНИЕ</h3>
+                        <p>Намеренные действия, портящие игровой опыт другим (например, блокирование проходов, создание ловушек в публичных местах).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Connect Section -->
+        <section id="connect" class="connect">
+            <h2 class="section-title">Как подключиться?</h2>
+            
+            <div class="servers-container">
+                <!-- Vanilla Server -->
+                <div class="server-card">
+                    <h3 class="server-type">🌿 Vanilla сервер</h3>
+                    <div class="server-details">
+                        <div class="server-info-item">
+                            <span class="info-label">IP:</span>
+                            <span class="info-value" id="vanilla-ip">45.93.200.74:25565</span>
+                            <button class="copy-button-small" onclick="copyToClipboard('vanilla-ip')">📋</button>
+                        </div>
+                        <div class="server-info-item">
+                            <span class="info-label">Версия:</span>
+                            <span class="info-value">1.21.5</span>
+                        </div>
+                        <p class="server-description">Ванильное выживание без читов</p>
+                    </div>
+                </div>
+
+                <!-- Modded Server -->
+                <div class="server-card">
+                    <h3 class="server-type">⚙️ Modded сервер</h3>
+                    <div class="server-details">
+                        <div class="server-info-item">
+                            <span class="info-label">IP:</span>
+                            <span class="info-value" id="modded-ip">yuriyuri.ru:25566</span>
+                            <button class="copy-button-small" onclick="copyToClipboard('modded-ip')">📋</button>
+                        </div>
+                        <div class="server-info-item">
+                            <span class="info-label">Версия:</span>
+                            <span class="info-value">Forge 1.20.1</span>
+                        </div>
+                        <p class="server-note">⚠️ Без Optifine!</p>
+                        <div class="mods-links">
+                            <a href="http://yuriyuri.ru:8080/mods/" target="_blank" class="mod-link">📦 Скачать моды по отдельности</a>
+                            <a href="http://yuriyuri.ru:8080/mods.zip" target="_blank" class="mod-link">📥 Скачать все моды (ZIP)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="frog-illustration">
+                <img src="public/images/123-Photoroom.png" alt="Лягушка" class="frog-img">
+            </div>
+
+            <div class="web-map-section">
+                <h3 class="map-title">🗺️ Веб-карта сервера</h3>
+                <div class="map-container">
+                    <iframe 
+                        src="http://www.yuriyuri.ru:3218/" 
+                        class="server-map"
+                        title="Карта сервера Minecraft"
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <a href="http://www.yuriyuri.ru:3218/" target="_blank" class="map-link">Открыть карту в полном размере →</a>
+            </div>
+        </section>
+
+        <!-- Donation Section -->
+        <section id="donate" class="donate">
+            <h2 class="section-title">💰 Поддержать проект</h2>
+            <div class="donate-content">
+                <p class="donate-description">Ваша поддержка помогает нам развивать сервер и добавлять новые возможности!</p>
+                <a href="https://funpay.com/users/16830751/" target="_blank" rel="noopener noreferrer" class="donate-button">
+                    <span class="donate-icon">💳</span>
+                    <span class="donate-text">Поддержать через FunPay</span>
+                </a>
+                <p class="donate-note">Спасибо за вашу поддержку! ❤️</p>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery">
+            <h2 class="section-title">Галерея</h2>
+            <div class="gallery-carousel">
+                <button class="carousel-btn prev" onclick="prevSlide()">‹</button>
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <img src="./assets/a7276ed8972cdfdc8c5be26131fe6be24f28cc08.png" alt="Скриншот сервера 1" class="carousel-image">
+                        <img src="./assets/ca06cd580a76ccacf99facf7ec2a4fdc8a576562.png" alt="Скриншот сервера 2" class="carousel-image">
+                        <img src="./assets/cdae75224753079daf32a72c9ff8c84455a61fb5.png" alt="Скриншот сервера 3" class="carousel-image">
+                    </div>
+                </div>
+                <button class="carousel-btn next" onclick="nextSlide()">›</button>
+            </div>
+            <div class="carousel-dots">
+                <span class="dot active" onclick="goToSlide(0)"></span>
+                <span class="dot" onclick="goToSlide(1)"></span>
+                <span class="dot" onclick="goToSlide(2)"></span>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer-main">
+            <div class="footer-content">
+                <div class="footer-social">
+                    <a href="https://t.me/kvakishnaya228" target="_blank" rel="noopener noreferrer" class="footer-link">
+                        <img src="assets/discord-icon.svg" alt="Telegram" class="footer-icon">
+                        <span>kvakishnaya228</span>
+                    </a>
+                    <a href="https://www.youtube.com/@kvakishnaya/videos" target="_blank" rel="noopener noreferrer" class="footer-link">
+                        <img src="assets/youtube-icon.svg" alt="YouTube" class="footer-icon">
+                        <span>kvakishnaya</span>
+                    </a>
+                </div>
+                <div class="footer-nav">
+                    <a href="#principles" class="footer-nav-link">правила</a>
+                    <a href="#punishments" class="footer-nav-link">наказания</a>
+                    <a href="#connect" class="footer-nav-link">как подключиться</a>
+                    <a href="#donate" class="footer-nav-link">донат</a>
+                    <a href="#gallery" class="footer-nav-link">галерея</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
