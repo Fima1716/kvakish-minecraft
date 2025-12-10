@@ -23,7 +23,7 @@
 body {
     font-family: var(--font-family);
     min-height: 100vh;
-    overflow-x: hidden;
+    overflow-x: hidden; /* ГАРАНТИЯ: Убираем горизонтальный скролл */
 }
 
 /* Main Container */
@@ -213,66 +213,53 @@ body {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-    :root {
-        --font-size-title: 52px;
-        --font-size-welcome: 38px;
-        --font-size-description: 26px;
-        --font-size-social: 30px;
+    .punishment-row,
+    .punishment-row-reverse {
+        flex-direction: column !important;
     }
-    
-    .container {
-        padding: 25px 20px;
+
+    .punishment-row-reverse .punishment-badge {
+        order: 3;
     }
-    
-    .star-yellow {
-        top: 50px;
-        right: 30px;
-        width: 140px;
-        height: 140px;
+
+    .punishment-row .punishment-badge {
+        order: 3;
     }
-    
-    .star-purple {
-        bottom: 200px;
-        left: 30px;
-        width: 100px;
-        height: 100px;
+
+    .punishment-content {
+        order: 1;
     }
-    
-    .content {
-        padding: 15px 10px;
+
+    .punishment-number {
+        margin-bottom: 10px;
     }
-    
-    .title {
-        margin-bottom: 25px;
-        word-wrap: break-word;
-    }
-    
-    .welcome {
-        margin-bottom: 20px;
-        word-wrap: break-word;
-    }
-    
-    .description {
-        word-wrap: break-word;
-    }
-    
-    .footer {
-        flex-direction: column;
-        gap: 35px;
-        align-items: center;
-    }
-    
-    .social-link {
-        gap: 15px;
+
+    .punishment-badge {
+        font-size: 13px;
+        padding: 15px 20px;
         width: 100%;
-        justify-content: center;
+        text-align: center;
+        border-radius: 15px;
     }
-    
-    .social-icon {
-        width: 70px;
-        height: 70px;
-    }
+    .info-label {
+    font-size: 12px;
 }
+
+.info-value {
+    font-size: 14px;
+}
+
+.server-type {
+    font-size: 20px;
+}
+
+.copy-button-small {
+    font-size: 14px;
+    padding: 6px 10px;
+}
+
+}
+
 
 /* Small Mobile Styles */
 @media (max-width: 480px) {

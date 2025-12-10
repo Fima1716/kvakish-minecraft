@@ -249,7 +249,14 @@
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* 3 карточки в верхней строке */
+    gap: 30px;
+}
+
+.center-flex {
+    grid-column: 1 / -1; /* вторая строка на всю ширину */
+    display: flex;
+    justify-content: center;
     gap: 30px;
 }
 
@@ -329,6 +336,7 @@
     color: var(--color-text-gray);
     line-height: 1.8;
     margin-bottom: 10px;
+    word-wrap: break-word; /* Дополнительная гарантия переноса текста в правилах */
 }
 
 .rule-note {
@@ -446,6 +454,13 @@
     transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
+.servers-container1 {
+    max-width: 750px;
+    margin: 0 auto 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
 
 .server-type {
     font-family: var(--font-family);
@@ -479,6 +494,7 @@
     font-size: 20px;
     color: var(--color-primary);
     flex: 1;
+    word-break: break-all; /* АДАПТИВНОСТЬ: Гарантирует перенос длинных IP-адресов */
 }
 
 .copy-button-small {
@@ -839,7 +855,17 @@
     .cta-button { font-size: 18px; padding: 18px 36px; }
     
     .section-title { font-size: 42px; }
-    .principles-grid { grid-template-columns: repeat(2, 1fr); gap: 25px; }
+    .principles-grid { grid-template-columns: repeat(2, 1fr); gap: 25px; } 
+
+    /* АДАПТИВНОСТЬ: Корректируем центр-флекс для планшетов */
+    .center-flex {
+        flex-direction: column; 
+        align-items: center;
+    }
+    .principle-card {
+        width: 100%; 
+        max-width: 400px;
+    }
     
     .punishment-row,
     .punishment-row-reverse {
@@ -858,152 +884,204 @@
 
 /* Mobile Large */
 @media (max-width: 768px) {
-    .navbar { padding: 12px 0; }
+    .navbar { padding: 10px 0; }
     .nav-container { 
         flex-direction: column; 
-        gap: 15px;
+        gap: 10px;
         padding: 0 15px;
+        align-items: center; /* Центрируем навигационные ссылки */
     }
-    .nav-link { font-size: 13px; }
+    .nav-link { font-size: 11px; }
     
-    .splash-screen { padding: 30px 20px; }
-    .splash-title { font-size: 48px; line-height: 1.3; }
-    .splash-welcome { font-size: 32px; line-height: 1.3; }
-    .splash-description { font-size: 20px; line-height: 1.3; }
-    .splash-footer { flex-direction: column; align-items: center; gap: 25px; }
-    .splash-content { padding: 15px; }
+    .splash-screen { padding: 25px 15px; }
+    .splash-title { font-size: 24px; line-height: 1.3; }
+    .splash-welcome { font-size: 16px; line-height: 1.3; }
+    .splash-description { font-size: 10px; line-height: 1.3; }
+    .splash-footer { flex-direction: column; align-items: center; gap: 20px; }
+    .splash-content { padding: 10px; }
     
-    .hero { height: 80vh; }
+    .hero { height: 75vh; }
     .hero-bg { background-attachment: scroll; }
-    .hero-title { font-size: 48px; }
-    .hero-subtitle { font-size: 24px; }
-    .hero-description { font-size: 16px; }
-    .cta-button { font-size: 16px; padding: 15px 30px; }
+    .hero-title { font-size: 24px; }
+    .hero-subtitle { font-size: 12px; }
+    .hero-description { font-size: 10px; }
+    .cta-button { font-size: 12px; padding: 12px 24px; }
     
-    .section-title { font-size: 32px; margin-bottom: 40px; }
-    .principles, .rules, .punishments, .connect, .gallery { padding: 60px 15px; }
+    .section-title { font-size: 18px; margin-bottom: 30px; }
+    .principles, .rules, .punishments, .connect, .gallery { padding: 40px 15px; }
     
-    .principles-grid { grid-template-columns: 1fr; gap: 20px; }
-    .principle-card { padding: 30px; }
-    .card-number { font-size: 36px; }
-    .card-title { font-size: 16px; }
+    .principles-grid { 
+        grid-template-columns: 1fr; 
+        gap: 15px; 
+    }
+    .principle-card { padding: 20px; }
+    .card-number { font-size: 20px; }
+    .card-title { font-size: 10px; }
     
-    .rule-number { font-size: 24px; }
-    .rule-item p { font-size: 14px; }
+    .rule-number { font-size: 14px; }
+    .rule-item p { font-size: 11px; }
     
-    .punishment-box { padding: 25px; }
-    .punishment-box p { font-size: 14px; }
-    .punishment-number { font-size: 20px; }
-    .punishment-content p { font-size: 13px; }
+    .punishment-box { padding: 20px; }
+    .punishment-box p { font-size: 10px; }
+    .punishment-number { font-size: 12px; }
+    .punishment-content p { font-size: 10px; }
     .punishment-badge { 
-        font-size: 11px; 
-        padding: 15px 20px;
+        font-size: 9px; 
+        padding: 10px 15px;
     }
     
-    .connect-label { font-size: 20px; }
-    .connect-value { font-size: 24px; }
-    .copy-button { font-size: 14px; padding: 12px 24px; }
-    .frog-img { width: 80px; }
+    /* CONNECT SECTION REDUCTIONS */
+    .servers-container {
+        grid-template-columns: 1fr; /* Принудительно 1 колонка для серверов */
+    }
+    .server-type { font-size: 14px; } /* Было 28px */
+    .info-label { font-size: 10px; } /* Было 16px */
+    .info-value { font-size: 12px; } /* Было 20px */
+    .server-description { font-size: 10px; } /* Было 14px */
+    .server-note { font-size: 10px; } /* Было 14px */
+    .mod-link { font-size: 10px; padding: 8px 15px; } /* Было 13px */
+    .copy-button-small { font-size: 16px; padding: 6px 12px; }
+    .frog-img { width: 50px; }
+    .map-title { font-size: 14px; } /* Было 28px */
+    .map-link { font-size: 10px; } /* Было 14px */
     
-    .carousel-btn { width: 40px; height: 40px; font-size: 24px; }
+    /* DONATE SECTION REDUCTIONS */
+    .donate-description { font-size: 10px; } /* Было 18px */
+    .donate-button { padding: 15px 30px; font-size: 10px; gap: 10px; } /* Было 20px */
+    .donate-icon { font-size: 16px; } /* Было 32px */
+    .donate-note { font-size: 9px; } /* Было 14px */
+    
+    /* GALLERY & FOOTER */
+    .gallery-carousel {
+        padding: 0 5px; 
+    }
+    .carousel-btn { width: 30px; height: 30px; font-size: 18px; }
     
     .footer-content {
         flex-direction: column;
         text-align: center;
-        gap: 30px;
+        gap: 20px;
     }
     .footer-social, .footer-nav {
         flex-direction: column;
-        gap: 20px;
+        gap: 15px;
     }
-    .footer-link { font-size: 16px; }
-    .footer-nav-link { font-size: 14px; }
+    .footer-link { font-size: 12px; }
+    .footer-nav-link { font-size: 11px; }
+    .footer-icon { width: 30px; height: 30px; }
 }
 
 /* Mobile Medium */
 @media (max-width: 480px) {
-    .splash-screen { padding: 25px 15px; }
-    .splash-title { font-size: 36px; line-height: 1.2; word-break: break-word; }
-    .splash-welcome { font-size: 24px; line-height: 1.3; word-break: break-word; }
-    .splash-description { font-size: 16px; line-height: 1.3; }
-    .splash-content { padding: 10px; }
-    .splash-footer { gap: 20px; }
+    .splash-screen { padding: 20px 10px; }
+    .splash-title { font-size: 18px; line-height: 1.2; word-break: break-word; }
+    .splash-welcome { font-size: 12px; line-height: 1.3; word-break: break-word; }
+    .splash-description { font-size: 10px; line-height: 1.3; }
+    .splash-content { padding: 8px; }
+    .splash-footer { gap: 15px; }
     
-    .hero-title { font-size: 36px; }
-    .hero-subtitle { font-size: 20px; }
-    .hero-description { font-size: 14px; }
-    .cta-button { font-size: 14px; padding: 12px 24px; }
+    .hero-title { font-size: 18px; }
+    .hero-subtitle { font-size: 11px; }
+    .hero-description { font-size: 10px; }
+    .cta-button { font-size: 11px; padding: 10px 20px; }
     
-    .section-title { font-size: 28px; }
+    .section-title { font-size: 16px; }
     
-    .principle-card { padding: 25px; }
-    .card-number { font-size: 32px; }
-    .card-title { font-size: 14px; }
+    .principle-card { padding: 15px; }
+    .card-number { font-size: 18px; }
+    .card-title { font-size: 10px; }
     
-    .rule-number { font-size: 20px; }
-    .rule-item p { font-size: 13px; }
+    .rule-number { font-size: 12px; }
+    .rule-item p { font-size: 10px; }
     
-    .punishment-box { padding: 20px; }
-    .punishment-number { font-size: 18px; }
-    .punishment-content p { font-size: 12px; }
+    .punishment-box { padding: 15px; }
+    .punishment-number { font-size: 11px; }
+    .punishment-content p { font-size: 10px; }
     .punishment-badge { 
-        font-size: 10px; 
-        padding: 12px 18px;
+        font-size: 9px; 
+        padding: 8px 12px;
     }
     
-    .connect-label { font-size: 18px; }
-    .connect-value { font-size: 20px; }
-    .frog-illustration { gap: 20px; }
-    .frog-img { width: 60px; }
+    /* CONNECT SECTION REDUCTIONS */
+    .server-type { font-size: 12px; }
+    .info-label { font-size: 9px; }
+    .info-value { font-size: 10px; }
+    .server-description { font-size: 9px; }
+    .server-note { font-size: 9px; }
+    .mod-link { font-size: 9px; padding: 6px 10px; }
+    .copy-button-small { font-size: 14px; padding: 5px 10px; }
+    .frog-illustration { gap: 15px; }
+    .frog-img { width: 40px; }
+    .map-title { font-size: 12px; }
+    .map-link { font-size: 9px; }
     
-    .carousel-btn { width: 35px; height: 35px; font-size: 20px; }
-    .dot { width: 12px; height: 12px; }
+    /* DONATE SECTION REDUCTIONS */
+    .donate-description { font-size: 9px; }
+    .donate-button { padding: 12px 25px; font-size: 9px; gap: 8px; }
+    .donate-icon { font-size: 14px; }
+    .donate-note { font-size: 8px; }
     
-    .footer-link { font-size: 14px; }
-    .footer-icon { width: 40px; height: 40px; }
+    /* GALLERY & FOOTER */
+    .carousel-btn { width: 25px; height: 25px; font-size: 16px; }
+    .dot { width: 10px; height: 10px; }
+    
+    .footer-link { font-size: 10px; }
+    .footer-icon { width: 25px; height: 25px; }
 }
 
 /* Mobile Small */
 @media (max-width: 360px) {
-    .splash-screen { padding: 20px 12px; }
-    .splash-title { font-size: 28px; line-height: 1.2; }
-    .splash-welcome { font-size: 20px; line-height: 1.2; }
-    .splash-description { font-size: 14px; line-height: 1.3; }
-    .splash-content { padding: 8px; }
+    .splash-screen { padding: 15px 8px; }
+    .splash-title { font-size: 14px; line-height: 1.2; }
+    .splash-welcome { font-size: 11px; line-height: 1.2; }
+    .splash-description { font-size: 10px; line-height: 1.3; }
+    .splash-content { padding: 6px; }
     
-    .hero-title { font-size: 28px; }
-    .hero-subtitle { font-size: 18px; }
-    .hero-description { font-size: 12px; }
+    .hero-title { font-size: 14px; }
+    .hero-subtitle { font-size: 10px; }
+    .hero-description { font-size: 10px; }
     
-    .section-title { font-size: 24px; }
+    .section-title { font-size: 14px; }
     
-    .card-number { font-size: 28px; }
-    .card-title { font-size: 13px; }
+    .card-number { font-size: 16px; }
+    .card-title { font-size: 10px; }
     
-    .frog-img { width: 50px; }
+    /* CONNECT SECTION REDUCTIONS */
+    .server-type { font-size: 11px; }
+    .info-value { font-size: 9px; }
+    .map-title { font-size: 11px; }
+    
+    .frog-img { width: 30px; }
 }
 
 /* Landscape Mobile */
 @media (max-height: 500px) and (orientation: landscape) {
-    .splash-screen { padding: 15px; }
-    .splash-title { font-size: 24px; margin-bottom: 10px; }
-    .splash-welcome { font-size: 18px; margin-bottom: 8px; }
-    .splash-description { font-size: 12px; }
-    .splash-content { padding: 5px; }
-    .splash-footer { gap: 15px; }
+    .splash-screen { padding: 10px; }
+    .splash-title { font-size: 14px; margin-bottom: 5px; }
+    .splash-welcome { font-size: 10px; margin-bottom: 4px; }
+    .splash-description { font-size: 10px; }
+    .splash-content { padding: 4px; }
+    .splash-footer { gap: 10px; }
     
     .hero { height: 100vh; }
-    .hero-content { padding: 10px; }
-    .hero-title { font-size: 32px; margin-bottom: 10px; }
-    .hero-subtitle { font-size: 20px; margin-bottom: 8px; }
-    .hero-description { font-size: 14px; margin-bottom: 15px; }
-    .cta-button { padding: 10px 20px; font-size: 12px; }
+    .hero-content { padding: 8px; }
+    .hero-title { font-size: 16px; margin-bottom: 8px; }
+    .hero-subtitle { font-size: 11px; margin-bottom: 6px; }
+    .hero-description { font-size: 10px; margin-bottom: 10px; }
+    .cta-button { padding: 10px 20px; font-size: 10px; }
+
+    /* CONNECT/DONATE SECTION REDUCTIONS */
+    .server-type { font-size: 12px; }
+    .info-label { font-size: 10px; }
+    .info-value { font-size: 12px; }
+    .map-title { font-size: 14px; }
+    .donate-button { padding: 10px 20px; font-size: 10px; }
 }
 
 /* Very small screens */
 @media (max-width: 320px) {
-    .splash-screen { padding: 15px 10px; }
-    .splash-title { font-size: 24px; }
-    .splash-welcome { font-size: 18px; }
-    .splash-description { font-size: 12px; }
+    .splash-screen { padding: 10px 8px; }
+    .splash-title { font-size: 14px; }
+    .splash-welcome { font-size: 10px; }
+    .splash-description { font-size: 10px; }
 }
